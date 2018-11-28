@@ -9,8 +9,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-public abstract class User {
+@Entity
+public class User {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String firstName;
