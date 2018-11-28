@@ -24,6 +24,5 @@ public class AdminDao {
 			// No user with that username found.
 			return null;
 		}
-
 	}
 }
