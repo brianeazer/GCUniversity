@@ -17,7 +17,7 @@ public class Course {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private ArrayList<Enrollment> enrollments;
+	
 
 	
 
@@ -59,7 +59,7 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course [id=" + id + ", name=" + name + ", enrollment=" + enrollments + "]";
+		return "Course [id=" + id + ", name=" + name + ", enrollment=]";
 	}
 
 }
