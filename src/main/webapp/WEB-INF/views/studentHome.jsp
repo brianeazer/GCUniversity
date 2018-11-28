@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-You made it to the student home
+<h1>You made it to the student home</h1>
+<p>
+${enrollments }
+</p>
 </body>
 </html>

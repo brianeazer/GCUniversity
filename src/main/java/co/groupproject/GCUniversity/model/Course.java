@@ -17,6 +17,10 @@ public class Course {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> b1ea3e9a2e346f3404dfcf1ff7e5c9816da10006
 
 	
 
@@ -58,7 +62,7 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course [id=" + id + ", name=" + name + ", enrollment=" + enrollments + "]";
+		return "Course [id=" + id + ", name=" + name + ", enrollment=]";
 	}
 
 }

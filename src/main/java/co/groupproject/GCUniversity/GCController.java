@@ -35,7 +35,8 @@ public class GCController {
 		
 		User user = userDao.findByLastname(lastName);
 		if (user instanceof Student) {
-			return new ModelAndView("studentHome");
+			System.out.println(user);
+			return new ModelAndView("studentHome", "enrollments", userDao.findByStudent((Student) user));
 		} 
 		if (user instanceof Admin) {
 			return new ModelAndView("adminCourses", "courses", courseDao.findAllCourses());
