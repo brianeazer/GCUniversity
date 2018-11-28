@@ -28,9 +28,7 @@ public class GCController {
 	public ModelAndView adminOrUser(@RequestParam(name = "lastName") String lastName) {
 		
 		User user = userDao.findByLastname(lastName);
-
 		ModelAndView mv = new ModelAndView();
-
 		return mv;
 
 	}
