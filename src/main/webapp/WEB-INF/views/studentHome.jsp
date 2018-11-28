@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+You made it to the student home
 </body>
 </html>

@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.groupproject.GCUniversity.dao.AdminDao;
+import co.groupproject.GCUniversity.dao.CourseDao;
 import co.groupproject.GCUniversity.dao.StudentDao;
 import co.groupproject.GCUniversity.dao.UserDao;
+import co.groupproject.GCUniversity.model.Admin;
+import co.groupproject.GCUniversity.model.Student;
 import co.groupproject.GCUniversity.model.User;
 
 @Controller
@@ -17,6 +20,9 @@ public class GCController {
 
 	@Autowired
 	UserDao userDao;
+	
+	@Autowired
+	CourseDao courseDao;
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -28,7 +34,12 @@ public class GCController {
 	public ModelAndView adminOrUser(@RequestParam(name = "lastName") String lastName) {
 		
 		User user = userDao.findByLastname(lastName);
-		System.out.println(user.getFirstName());
+		if (user instanceof Student) {
+			return new ModelAndView("studentHome");
+		} 
+		if (user instanceof Admin) {
+			return new ModelAndView("adminCourses", "courses", courseDao.findAllCourses());
+		}
 		ModelAndView mv = new ModelAndView("home");
 		return mv;
 
