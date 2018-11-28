@@ -43,7 +43,12 @@ public class GCController {
 		}
 		ModelAndView mv = new ModelAndView("home");
 		return mv;
+	}
+	@RequestMapping("/admin/students")
+	public ModelAndView adminStudents() {
+		ModelAndView mv = new ModelAndView();
 
+		return mv;
 	}
 
 	@RequestMapping("/student-home")
@@ -67,13 +72,6 @@ public class GCController {
 		return mv;
 	}
 
-	@RequestMapping("/admin-courses")
-	public ModelAndView adminCourses() {
-		ModelAndView mv = new ModelAndView();
-
-		return mv;
-	}
-
 	@RequestMapping("/admin-course")
 	public ModelAndView adminCourse() {
 		ModelAndView mv = new ModelAndView();
@@ -87,5 +85,6 @@ public class GCController {
 
 		return mv;
 	}
+	
 
 }

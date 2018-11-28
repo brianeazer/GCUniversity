@@ -9,8 +9,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>This is admin courses</h1>
+	<h1>This is admin courses</h1>
+	<ul>
+	<c:forEach var="course" items="${courses}">
+	<li name="${course}"> ${course.name} </li>
 
-${courses }
+
+	</c:forEach>
+	</ul>
+
 </body>
 </html>

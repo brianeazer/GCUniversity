@@ -44,19 +44,6 @@ public class Course {
 	}
 
 
-
-	public ArrayList<Enrollment> getEnrollments() {
-		return enrollments;
-	}
-
-
-
-	public void setEnrollments(ArrayList<Enrollment> enrollments) {
-		this.enrollments = enrollments;
-	}
-
-
-
 	@Override
 	public String toString() {
 		return "Course [id=" + id + ", name=" + name + ", enrollment=]";
