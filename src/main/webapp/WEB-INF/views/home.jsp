@@ -7,6 +7,13 @@
 <title>Home</title>
 </head>
 <body>
+	<h1>Login</h1>
+	<form action="/">
+	<p> Last name: <input name="lastName"> </p>
+	
+	 
+	 
+	</form>
 
 </body>
 </html>

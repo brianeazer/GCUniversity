@@ -2,7 +2,9 @@ package co.groupproject.GCUniversity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -17,6 +19,14 @@ public class GCController {
 		
 		return new ModelAndView("home");
 	}
+	@PostMapping ("/") 
+	public ModelAndView adminOrUser(@RequestParam(name="lastName") String lastName) {
+		ModelAndView mv = new ModelAndView();
+		
+		
+		return mv;
+		
+	}
 	@RequestMapping ("/student-home") 
 	public ModelAndView studentHome() {
 		ModelAndView mv = new ModelAndView();
@@ -24,6 +34,8 @@ public class GCController {
 		
 		return mv;
 	}
+	
+	
 	@RequestMapping ("/student-enroll") 
 	public ModelAndView studentEnroll() {
 		ModelAndView mv = new ModelAndView();
