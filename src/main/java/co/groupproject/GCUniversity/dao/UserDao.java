@@ -7,20 +7,21 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import co.groupproject.GCUniversity.model.Student;
-
-;
+import co.groupproject.GCUniversity.model.Admin;
+import co.groupproject.GCUniversity.model.User;
 
 @Repository
 @Transactional
-public class StudentDao {
-
+public class UserDao {
+	
 	@PersistenceContext
 	private EntityManager em;
-
-	public Student findByLastname(String lastname) {
+	
+	
+	
+	public User findByLastname(String lastname) {
 		try {
-			return em.createQuery("FROM Student" + " WHERE lastname = :lastname", Student.class)
+			return em.createQuery("FROM User" + " WHERE lastname = :lastname", User.class)
 					.setParameter("lastname", lastname).getSingleResult();
 		} catch (NoResultException ex) {
 			// No user with that username found.
@@ -28,5 +29,7 @@ public class StudentDao {
 		}
 
 	}
+	
+	
 
 }
