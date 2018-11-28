@@ -24,7 +24,6 @@ public class UserDao {
 			return em.createQuery("FROM User" + " WHERE lastname = :lastname", User.class)
 					.setParameter("lastname", lastname).getSingleResult();
 		} catch (NoResultException ex) {
-			// No user with that username found.
 			return null;
 		}
 
