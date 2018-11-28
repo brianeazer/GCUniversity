@@ -12,7 +12,7 @@ public class GCController {
 	
 //	@Autowired
 //	String something;
-	
+
 	@RequestMapping ("/") 
 	public ModelAndView index() {
 		
