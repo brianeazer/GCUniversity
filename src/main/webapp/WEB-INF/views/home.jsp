@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Login</h1>
-	<form action="/">
+	<form action="/admin/courses">
 	<p> Last name: <input name="lastName"> </p>
 	
 	 

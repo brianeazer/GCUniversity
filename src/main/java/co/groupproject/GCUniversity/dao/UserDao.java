@@ -19,10 +19,10 @@ public class UserDao {
 	
 	
 	
-	public User findByLastname(String lastname) {
+	public User findByLastname(String lastName) {
 		try {
-			return em.createQuery("FROM User" + " WHERE lastname = :lastname", User.class)
-					.setParameter("lastname", lastname).getSingleResult();
+			return em.createQuery("FROM User" + " WHERE lastName = :lastName", User.class)
+					.setParameter("lastName", lastName).getSingleResult();
 		} catch (NoResultException ex) {
 			return null;
 		}

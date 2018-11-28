@@ -24,11 +24,12 @@ public class GCController {
 		return new ModelAndView("home");
 	}
 
-	@PostMapping("/")
+	@RequestMapping("/admin/courses")
 	public ModelAndView adminOrUser(@RequestParam(name = "lastName") String lastName) {
 		
 		User user = userDao.findByLastname(lastName);
-		ModelAndView mv = new ModelAndView();
+		System.out.println(user.getFirstName());
+		ModelAndView mv = new ModelAndView("home");
 		return mv;
 
 	}
